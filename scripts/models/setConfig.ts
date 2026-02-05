@@ -83,8 +83,10 @@ export const matchRoot = shape({
   "control-tor-address": string,
   "peer-tor-address": string,
   "watchtower-tor-address": string,
+   externalip: string,
 }, [
   "alias",
+  "externalip",
   "min-chan-size",
   "max-chan-size",
   "watchtower-tor-address",
