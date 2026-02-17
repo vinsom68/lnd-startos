@@ -37,6 +37,13 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
     "pattern-description":
       "Must be at least 1 character and no more than 32 characters",
   },
+  "externalip": {
+    "type": "string",
+    "name": "External IP V4",
+    "description": "The ip address to announce to the network for incoming peer connections",
+    "nullable": true,
+    "copyable": true,
+  },
   "color": {
     "type": "string",
     "name": "Color",

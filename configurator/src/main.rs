@@ -76,6 +76,7 @@ struct Config {
     peer_tor_address: String,
     watchtower_tor_address: String,
     alias: Option<String>,
+    externalip: Option<String>,
     color: String,
     accept_keysend: bool,
     accept_amp: bool,
@@ -417,6 +418,10 @@ fn main() -> Result<(), anyhow::Error> {
         gc_canceled_invoices_on_startup = config.advanced.gc_canceled_invoices_on_startup,
         allow_circular_route = config.advanced.allow_circular_route,
         alias = alias,
+        externalip_row = match config.externalip {
+            None => String::new(),
+            Some(u) => format!("externalip={}", u),
+        },
         color = config.color,
         feeurl_row = if use_neutrino {
             "fee.url=https://nodes.lightning.computer/fees/v1/btc-fee-estimates.json"
