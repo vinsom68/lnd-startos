@@ -1,6 +1,7 @@
 # Wrapper for LND
 
 This project wraps [LND](https://github.com/lightningnetwork/lnd) for StartOS. The Lightning Network Daemon (lnd) - is a complete implementation of a Lightning Network node.
+This fork only adds the `externalip` setting.
 
 ## Build environment
 Before building the LND package, your build environment must be setup for building StartOS services. Instructions for setting up the proper build environment can be found in the [Developer Docs](https://docs.start9.com/latest/developer-docs/packaging).
